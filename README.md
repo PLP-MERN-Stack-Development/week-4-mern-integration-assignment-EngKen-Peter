@@ -1,79 +1,103 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19889209&assignment_repo_type=AssignmentRepo)
-# MERN Stack Integration Assignment
+Week 4: MERN Stack Blog Application
+Project Overview
+This is a full-stack MERN (MongoDB, Express.js, React.js, Node.js) blog application built for the PLP Software Engineering Program. It allows users to create, view, and filter blog posts with categories. The application demonstrates backend-frontend integration, RESTful API communication, MongoDB usage, and React state management.
 
-This assignment focuses on building a full-stack MERN (MongoDB, Express.js, React.js, Node.js) application that demonstrates seamless integration between front-end and back-end components.
+Directory Structure
+bash
+Copy
+Edit
+week-4-mern-integration-assignment-EngKen-Peter/
+├── client/            # React front-end
+├── server/            # Express + MongoDB backend
+Setup Instructions
+1. Clone the Repository
+bash
+Copy
+Edit
+git clone https://github.com/PLP-MERN-Stack-Development/week-4-mern-integration-assignment-EngKen-Peter.git
+cd week-4-mern-integration-assignment-EngKen-Peter
+2. Server Setup
+bash
+Copy
+Edit
+cd server
+npm install
+Create a .env file based on the .env.example:
 
-## Assignment Overview
+ini
+Copy
+Edit
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/mern-blog
+Start the server:
 
-You will build a blog application with the following features:
-1. RESTful API with Express.js and MongoDB
-2. React front-end with component architecture
-3. Full CRUD functionality for blog posts
-4. User authentication and authorization
-5. Advanced features like image uploads and comments
+arduino
+Copy
+Edit
+npm run dev
+3. Client Setup
+arduino
+Copy
+Edit
+cd client
+npm install
+npm run dev
+API Endpoints
+Method	Endpoint	Description
+GET	/api/posts	Get all blog posts
+GET	/api/posts/:id	Get a specific blog post
+POST	/api/posts	Create a new blog post
+PUT	/api/posts/:id	Update a blog post
+DELETE	/api/posts/:id	Delete a blog post
+GET	/api/categories	Get all categories
+POST	/api/categories	Create a new category
 
-## Project Structure
+Features Implemented
+View all blog posts
 
-```
-mern-blog/
-├── client/                 # React front-end
-│   ├── public/             # Static files
-│   ├── src/                # React source code
-│   │   ├── components/     # Reusable components
-│   │   ├── pages/          # Page components
-│   │   ├── hooks/          # Custom React hooks
-│   │   ├── services/       # API services
-│   │   ├── context/        # React context providers
-│   │   └── App.jsx         # Main application component
-│   └── package.json        # Client dependencies
-├── server/                 # Express.js back-end
-│   ├── config/             # Configuration files
-│   ├── controllers/        # Route controllers
-│   ├── models/             # Mongoose models
-│   ├── routes/             # API routes
-│   ├── middleware/         # Custom middleware
-│   ├── utils/              # Utility functions
-│   ├── server.js           # Main server file
-│   └── package.json        # Server dependencies
-└── README.md               # Project documentation
-```
+Create a new blog post
 
-## Getting Started
+Filter posts by category
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Follow the setup instructions in the `Week4-Assignment.md` file
-4. Complete the tasks outlined in the assignment
+RESTful API integration
 
-## Files Included
+MongoDB schema for posts and categories
 
-- `Week4-Assignment.md`: Detailed assignment instructions
-- Starter code for both client and server:
-  - Basic project structure
-  - Configuration files
-  - Sample models and components
+Environment variable configuration
 
-## Requirements
+Search and filter functionality
 
-- Node.js (v18 or higher)
-- MongoDB (local installation or Atlas account)
-- npm or yarn
-- Git
+Responsive UI using Tailwind CSS
 
-## Submission
+React state management with hooks
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+Screenshots
+The following screenshots are included in the client/screenshots directory:
 
-1. Complete both the client and server portions of the application
-2. Implement all required API endpoints
-3. Create the necessary React components and hooks
-4. Document your API and setup process in the README.md
-5. Include screenshots of your working application
+Homepage - Posts list
 
-## Resources
+Create Post form
 
-- [MongoDB Documentation](https://docs.mongodb.com/)
-- [Express.js Documentation](https://expressjs.com/)
-- [React Documentation](https://react.dev/)
-- [Node.js Documentation](https://nodejs.org/en/docs/)
-- [Mongoose Documentation](https://mongoosejs.com/docs/) 
+Post submission confirmation
+
+MongoDB - Posts collection
+
+MongoDB - Categories collection
+
+Known Issues
+Some posts may display "No content available" due to empty body fields or incomplete category data. Backend logic and API structure remain functional and correct.
+
+Submission Checklist
+GitHub Classroom repository used
+
+Client and server directories are complete
+
+.env.example files included
+
+Screenshots added to the repository
+
+Full documentation provided in this README file
+
+Author
+Kennedy Mbaluka Peter
+Student - PLP MERN Stack Development Program
